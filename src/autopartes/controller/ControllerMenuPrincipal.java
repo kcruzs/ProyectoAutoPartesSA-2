@@ -28,7 +28,7 @@ public class ControllerMenuPrincipal {
     public TextField textDescuento;
     public Label labelPorciento;
     public Button botonGuardar;
-    public Label etiquetaProducto;
+    public Label etiquetaProductos;
     public Label labelCodProducto;
     public TextField textCodProducto;
     public Label labelNombreProducto;
@@ -43,7 +43,7 @@ public class ControllerMenuPrincipal {
 
     public void vermenuProducto(ActionEvent actionEvent) {
         labelTitulo.setVisible(true);
-        etiquetaProducto.setVisible(true);
+        etiquetaProductos.setVisible(true);
         labelCodProducto.setVisible(true);
         textCodProducto.setVisible(true);
         labelNombreProducto.setVisible(true);
