@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autopartes.controller.ControllerLogin">
+   <children>
+      <Label layoutX="61.0" layoutY="24.0" text="EMPRESA AUTOPARTES S.A">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="147.0" text="Usuario:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsuario" layoutX="206.0" layoutY="144.0" />
+      <Label layoutX="144.0" layoutY="182.0" text="Password:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <PasswordField id="txtContrasena" fx:id="txtContrasena" layoutX="206.0" layoutY="179.0" prefHeight="25.0" prefWidth="199.0" />
+      <Button id="btnIngresar" fx:id="btnIngresar" layoutX="221.0" layoutY="236.0" mnemonicParsing="false" onAction="#logear" prefHeight="37.0" prefWidth="104.0" text="Ingresar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
