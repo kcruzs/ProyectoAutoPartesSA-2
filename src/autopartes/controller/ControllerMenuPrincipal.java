@@ -28,6 +28,7 @@ public class ControllerMenuPrincipal {
     public TextField textDescuento;
     public Label labelPorciento;
     public Button botonGuardar;
+    public Button botonGuardarProducto;
     public Label etiquetaProductos;
     public Label labelCodProducto;
     public TextField textCodProducto;
@@ -52,7 +53,7 @@ public class ControllerMenuPrincipal {
         textPrecio.setVisible(true);
         labelExistencia.setVisible(true);
         textExistencia.setVisible(true);
-
+        botonGuardarProducto.setVisible(true);
     }
 
     public void vermenuClientes(ActionEvent actionEvent) {

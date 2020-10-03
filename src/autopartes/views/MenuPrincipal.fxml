@@ -96,5 +96,10 @@
       <TextField fx:id="textPrecio" layoutX="142.0" layoutY="179.0" prefHeight="25.0" prefWidth="79.0" visible="false" />
       <Label fx:id="labelExistencia" layoutX="42.0" layoutY="220.0" text="Cantidad Existencia" visible="false" />
       <TextField fx:id="textExistencia" layoutX="150.0" layoutY="216.0" prefHeight="25.0" prefWidth="66.0" visible="false" />
+      <Button fx:id="botonGuardarProducto" layoutX="194.0" layoutY="328.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="130.0" text="Guardar" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
