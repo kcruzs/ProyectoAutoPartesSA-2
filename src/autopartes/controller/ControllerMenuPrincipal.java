@@ -17,8 +17,7 @@ public class ControllerMenuPrincipal {
     public Label etiquetaClientes;
     public CheckBox checkboxCIndi;
     public CheckBox checkboxCEmpresa;
-    public Label labelNombre;
-    public Label labelDPI;
+    public Label labelNombre, labelDPI;
     public Label labelContacto;
     public Label labelDireccion;
     public Label labelDescuento;
@@ -29,12 +28,30 @@ public class ControllerMenuPrincipal {
     public TextField textDescuento;
     public Label labelPorciento;
     public Button botonGuardar;
-
+    public Label etiquetaProducto;
+    public Label labelCodProducto;
+    public TextField textCodProducto;
+    public Label labelNombreProducto;
+    public TextField textNombreProducto;
+    public Label labelPrecio;
+    public TextField textPrecio;
+    public Label labelExistencia;
+    public TextField textExistencia;
 
     public ControllerMenuPrincipal(){
     }
 
-    public void vermenuProductos(ActionEvent actionEvent) {
+    public void vermenuProducto(ActionEvent actionEvent) {
+        labelTitulo.setVisible(true);
+        etiquetaProducto.setVisible(true);
+        labelCodProducto.setVisible(true);
+        textCodProducto.setVisible(true);
+        labelNombreProducto.setVisible(true);
+        textNombreProducto.setVisible(true);
+        labelPrecio.setVisible(true);
+        textPrecio.setVisible(true);
+        labelExistencia.setVisible(true);
+        textExistencia.setVisible(true);
 
     }
 
