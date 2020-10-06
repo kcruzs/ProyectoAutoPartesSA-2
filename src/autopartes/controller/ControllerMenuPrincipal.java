@@ -13,25 +13,10 @@ import javafx.stage.Stage;
 import javax.swing.*;
 
 public class ControllerMenuPrincipal {
-    public Label labelTitulo;
-    public Label etiquetaClientes;
-    public CheckBox checkboxCIndi;
-    public CheckBox checkboxCEmpresa;
-    public Label labelNombre, labelDPI;
-    public Label labelContacto;
-    public Label labelDireccion;
-    public Label labelDescuento;
-    public TextField textNombre;
-    public TextField textDPI;
-    public TextField textContacto;
-    public TextField textDireccion;
-    public TextField textDescuento;
-    public Label labelPorciento;
-    public Button botonGuardar;
-    public Button botonGuardarProducto;
-    public Label etiquetaProductos;
-    public Label labelCodProducto;
-    public TextField textCodProducto;
+    public Label labelTitulo, etiquetaClientes,labelNombre, labelDPI, labelContacto, labelDireccion, labelDescuento,labelPorciento,etiquetaProductos,labelCodProducto;
+    public CheckBox checkboxCIndi, checkboxCEmpresa;
+    public TextField textNombre, textDPI,textContacto,textDireccion, textDescuento,textCodProducto;
+    public Button botonGuardar, botonGuardarProducto, botonGuardarEmpresa;
     public Label labelNombreProducto;
     public TextField textNombreProducto;
     public Label labelPrecio;
@@ -82,7 +67,7 @@ public class ControllerMenuPrincipal {
         textDireccion.setVisible(true);
          textDescuento.setVisible(true);
         labelPorciento.setVisible(true);
-        botonGuardar.setVisible(true);
+        botonGuardarEmpresa.setVisible(true);
         labelContacto.setVisible(true);
         textContacto.setVisible(true);
     }
