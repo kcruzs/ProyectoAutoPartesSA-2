@@ -20,6 +20,7 @@ public class Main extends Application {
             stage.setTitle("EMPRESA AUTOPARTES S.A");
             stage.setScene(new Scene(layout, 600, 400));
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
