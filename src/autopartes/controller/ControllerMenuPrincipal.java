@@ -1,6 +1,8 @@
 package autopartes.controller;
 
+import autopartes.modelo.Cliente;
 import autopartes.modelo.DataSistema;
+import autopartes.modelo.Empresa;
 import autopartes.modelo.Individual;
 import com.sun.xml.internal.ws.commons.xmlutil.Converter;
 import javafx.collections.FXCollections;
@@ -12,6 +14,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
+
 
 import javax.persistence.Table;
 import javax.swing.*;
@@ -29,6 +33,9 @@ public class ControllerMenuPrincipal {
     public TableView tablaClienteIndividual,tablaClienteEmpresa,tablaInventarios;
     public CheckBox checkClienteIndividual,checkClienteEmpresa;
     public DataSistema basedatos;
+
+    public TableColumn ciId,ciNombre,ciDpi,ciDireccion;
+    public TableColumn empID,empNombre,empContacto,empDireccion,empDescuento;
 
     public ControllerMenuPrincipal(){
         basedatos =new DataSistema();
@@ -95,12 +102,33 @@ public class ControllerMenuPrincipal {
         tablaClienteIndividual.setVisible(true);
         checkClienteEmpresa.setDisable(true);
         bottonLimpia.setVisible(true);
+        ObservableList<Individual> data =
+                FXCollections.observableArrayList(DataSistema.individual);
+        tablaClienteIndividual.setItems(data);
+    }
+
+    @FXML
+    public void initialize() {
+        ciId.setCellValueFactory(new PropertyValueFactory<Individual, Integer>("Id"));
+        ciNombre.setCellValueFactory(new PropertyValueFactory<Individual, String>("nombre"));
+        ciDpi.setCellValueFactory(new PropertyValueFactory<Individual, String>("dpi"));
+        ciDireccion.setCellValueFactory(new PropertyValueFactory<Individual, String>("Direccion"));
+
+        empID.setCellValueFactory(new PropertyValueFactory<Empresa, Integer>("Id"));
+        empNombre.setCellValueFactory(new PropertyValueFactory<Empresa, String>("nombre"));
+        empContacto.setCellValueFactory(new PropertyValueFactory<Empresa, String>("contacto"));
+        empDireccion.setCellValueFactory(new PropertyValueFactory<Empresa, String>("direccion"));
+        empDescuento.setCellValueFactory(new PropertyValueFactory<Empresa, Integer>("descuento"));
+
     }
 
     public void verClientesEmpresa(){
         checkClienteIndividual.setDisable(true);
         tablaClienteEmpresa.setVisible(true);
         bottonLimpia.setVisible(true);
+        ObservableList<Empresa> data =
+                FXCollections.observableArrayList(DataSistema.empresa);
+        tablaClienteEmpresa.setItems(data);
     }
 
     public void verInventarioProductos(){
@@ -159,12 +187,27 @@ public class ControllerMenuPrincipal {
 
 
     public void addCliente(){
-
+        //revisar este addcliente el parseo no esta funcionando....
         Individual c1 =new Individual(Integer.parseInt(textDPI.getText()));
         c1.setNombre(textNombre.getText());
         c1.setDireccion(textDireccion.getText());
         basedatos.agregarCliente(c1);
+        textDPI.setText(null);
+        textNombre.setText(null);
+        textDireccion.setText(null);
     }
+    public void addClienteEmpresa(){
+        Empresa e1 =new Empresa(textContacto.getText(),Integer.parseInt(textDescuento.getText()));
+        e1.setNombre(textNombre.getText());
+        e1.setDireccion(textDireccion.getText());
+        basedatos.agregarClienteEmpresa(e1);
+        textNombre.setText(null);
+        textDireccion.setText(null);
+        textContacto.setText(null);
+        textDescuento.setText(null);
+
+    }
+
 
 }
 

@@ -103,16 +103,17 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="botonGuardarEmpresa" layoutX="220.0" layoutY="318.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="91.0" text="Guardar" visible="false">
+      <Button fx:id="botonGuardarEmpresa" layoutX="220.0" layoutY="318.0" mnemonicParsing="false" onAction="#addClienteEmpresa" prefHeight="47.0" prefWidth="91.0" text="Guardar" visible="false">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tablaClienteIndividual" layoutX="4.0" layoutY="150.0" prefHeight="303.0" prefWidth="578.0" visible="false">
+      <TableView fx:id="tablaClienteIndividual" layoutX="4.0" layoutY="150.0" prefHeight="303.0" prefWidth="589.0" visible="false">
         <columns>
-          <TableColumn prefWidth="163.0" text="Nombre" />
-          <TableColumn minWidth="0.0" prefWidth="167.0" text="DPI" />
-            <TableColumn prefWidth="246.0" text="Direccion" />
+            <TableColumn fx:id="ciId" prefWidth="36.66666793823242" text="ID" />
+          <TableColumn fx:id="ciNombre" prefWidth="199.0" text="Nombre" />
+          <TableColumn fx:id="ciDpi" minWidth="0.0" prefWidth="161.0" text="DPI" />
+            <TableColumn fx:id="ciDireccion" prefWidth="191.0" text="Direccion" />
         </columns>
       </TableView>
       <CheckBox fx:id="checkClienteIndividual" layoutX="27.0" layoutY="77.0" mnemonicParsing="false" onAction="#verClientesIndividuales" text="Clientes Individual" visible="false" />
@@ -122,12 +123,13 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TableView fx:id="tablaClienteEmpresa" layoutX="14.0" layoutY="160.0" prefHeight="303.0" prefWidth="578.0" visible="false">
+      <TableView fx:id="tablaClienteEmpresa" layoutX="14.0" layoutY="160.0" prefHeight="293.0" prefWidth="578.0" visible="false">
          <columns>
-            <TableColumn prefWidth="151.0" text="Nombre" />
-            <TableColumn minWidth="0.0" prefWidth="106.0" text="Contacto" />
-            <TableColumn prefWidth="235.0" text="Direccion" />
-            <TableColumn prefWidth="85.0" text="\% Descuento " />
+            <TableColumn fx:id="empID" prefWidth="22.0" text="ID" />
+            <TableColumn fx:id="empNombre" prefWidth="127.99999237060547" text="Nombre" />
+            <TableColumn fx:id="empContacto" minWidth="0.0" prefWidth="118.00000762939453" text="Contacto" />
+            <TableColumn fx:id="empDireccion" maxWidth="520.0" minWidth="-Infinity" prefWidth="234.99998474121094" text="Direccion" />
+            <TableColumn fx:id="empDescuento" prefWidth="75.66665649414062" text="\%Descueto" />
          </columns>
       </TableView>
       <TableView fx:id="tablaInventarios" layoutX="9.0" layoutY="160.0" prefHeight="303.0" prefWidth="578.0" visible="false">
